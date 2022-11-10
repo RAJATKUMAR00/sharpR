@@ -33,6 +33,7 @@
 
 // console.log(johnRoom.table);
 
+
 // johnRoom.cleanTable();
 // this.garage.cleanTable();
 
@@ -135,3 +136,53 @@ const s5 =  new Student('Anjali', 23, 9036286382, 95.7);
 // Have you heard of static variables. Leverage that now.
 
 console.log(Student.countStudents());
+
+
+
+// FAT ARROW FUNCTIONS
+"use strict";
+
+var getA = function (a) {
+    return a;
+}
+
+let getA = a => a;
+console.log(getA(1));
+
+let square = a  => a*a;
+let square = (a)  => { return a*a};
+ 
+var a = 4;
+let square = () => { return a*a};
+let square = _ => { return a*a};
+console.log(square(2));
+
+
+let multi = (a,b) => { return a*b };
+console.log(multi(2,5));
+
+
+var x = function() {
+    var that = this;
+    this.val = 1;
+    setTimeout(function(){
+        that.val++;
+        console.log(that.val)
+    }, 1) 
+}; 
+var xx = new x();
+
+
+
+var x = function() {
+    console.log(arguments[2])
+};
+x(1,2,3);
+
+
+var x = (...n) => {
+    console.log(n[2])
+};
+x(1,2,3);
+
+
